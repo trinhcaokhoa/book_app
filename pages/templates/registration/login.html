@@ -1,6 +1,7 @@
 <!-- templates/registration/login.html-->
 
 {% extends '_base.html' %}
+{% load crispy_forms_tags %}
 {% block title %} Log In {% endblock title %}
 
 {% block content %} 
@@ -8,7 +9,7 @@
 <h2>Log in</h2>
 <form method="POST">
     {% csrf_token%}
-    {{form.as_p}}
+    {{ form|crispy }}
     <button type="submit"> Log In</button>
 </form>
 {% endblock content %}
