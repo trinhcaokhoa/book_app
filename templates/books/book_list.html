@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %} Books {% endblock title %}
+
+{% block content %}
+    {% for book in object_list %}
+    <div>
+        <h2><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></h2>
+
+    </div>
+    {% endfor %}
+
+{% endblock content %}
