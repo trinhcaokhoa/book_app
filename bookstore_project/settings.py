@@ -166,3 +166,9 @@ ACCOUNT_UNIQUE_EMAIL = True # new
 
 DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
+#Media
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
