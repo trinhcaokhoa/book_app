@@ -1,14 +1,13 @@
+<!-- templates/books/book_list.html -->
 {% extends '_base.html' %}
-{% load static %}
-
-{% block title %} Books {% endblock title %}
-
+{% block title %}Books{% endblock title %}
 {% block content %}
-    {% for book in object_list %}
-    <div>
-        <h2><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></h2>
-
-    </div>
-    {% endfor %}
-
+{% if not perms.books.special_status %}
+<a href="{% url 'orders' %}" class="btn btn-success" >Purchase All Books</a>
+{% endif %}
+{% for book in book_list %}
+<div>
+<h2><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></h2>
+</div>
+{% endfor %}
 {% endblock content %}
