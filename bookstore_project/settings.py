@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'books.apps.BooksConfig',
     'orders.apps.OrdersConfig',
+    'api.apps.ApiConfig',
     
 
     #Third-party
@@ -55,6 +56,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'debug_toolbar',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
